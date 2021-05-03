@@ -1,0 +1,23 @@
+#/bin/bash
+
+# Loop one
+for i in {1..5}
+do
+  echo "Loop step" $i
+done
+
+# Loop two - this is C style syntax which 
+# will be familiar if you have done any 
+# programming in C.
+for (( i=6; i<=8; i++ ))
+do
+  echo "c style loop" $i
+done
+
+# Loop three
+foods="fish chips pie peas"
+for food in $foods
+do
+   echo $food
+done
+

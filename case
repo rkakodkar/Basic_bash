@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# This script has a while loop that will keep going 
+# because 'true' is always true.
+# The first step of the loop reads input from the keyboard
+# The second step is a case statement. Which case is executed
+# depends on the input from the keyboard.  
+# 'bye' will break out of the while loop
+
+echo "Let's have a conversation ..."
+while true; 
+do
+  read input
+  case $input in
+      hello)
+             echo "Hello you you too!"
+             ;;
+      bye)
+             echo "Laters!"
+             break
+             ;;
+      *)
+             echo "I'm not sure I understand that, try again"
+             ;;
+  esac
+done

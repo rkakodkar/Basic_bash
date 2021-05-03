@@ -1,0 +1,24 @@
+#/bin/bash
+
+name=Rohit
+
+# The $( ) sytax means execute the command in the brackets
+# then set the result equal to the variable
+date=$(date +%Y-%m-%d)
+
+count=1
+
+
+# To use the value of a variable, use $
+# $name means 'use the value of variable $name
+echo "name is: " $name
+echo "today's date is: " $date
+echo "count = " $count
+
+# You can manipultation variables:
+# ${ ^^} changes the string to be all uppercase
+# Note for this syntax you will need bash 4
+echo "uppercase name is: " ${name^^}
+
+# You can do maths on the variables using $(( ))
+echo "count + 10 =" $((count + 10))

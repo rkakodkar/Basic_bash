@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+# First bash script
+# USER is an environment variable
+# USER is your username
+#
+# The $ in bash means get the value of a variable: 
+#  $USER means 'use the value' of USER
+
+
+echo "Hello" $USER

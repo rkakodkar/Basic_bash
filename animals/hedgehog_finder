@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+# Function to check for 
+is_hedgehog() {
+
+
+# In this function we want to match 
+# the word hedgeghog, and not worry about
+# upper or lower case letters.
+#
+# On Oscar,  you can use bash 4 syntax:
+#if [ ${1,,} == "hedgehog" ]; then
+
+
+animal=$(echo $1 |  tr '[:upper:]' '[:lower:]')
+if [ $animal == "hedgehog" ]; then
+  echo "hedgehog detected ::" $1
+fi
+}
+
+# Read a file line by line
+while IFS= read -r line; do
+   is_hedgehog $line
+done < list_of_animals
+
+
+
+
+

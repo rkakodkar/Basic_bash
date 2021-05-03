@@ -1,0 +1,30 @@
+#!/bin/bash 
+
+# This script reads checks whether 
+# the first argument is greater than 3
+# Example run:
+#    bash example_if 7
+
+
+# For numbers 
+# ===================  =======  
+# Equals                 -eq    
+# Not Equals             -ne    
+# Greater Than           -gt    
+# Less Than              -lt    
+# Greater or Equals      -ge    
+# Less Than or Equals    -le    
+
+# Check that there is one argument only
+if [ "$#" -ne 1 ]; then
+  echo "Expecting one number"
+  echo "usage:  bash example_if number"
+  exit 1
+fi
+
+# $1 is the first argument to the script
+if [ $1 -gt 3 ]; then
+  echo $1 " is greater than 3"
+else
+  echo $1 " is less/equal to than 3"
+fi

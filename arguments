@@ -1,0 +1,24 @@
+#/bin/bash
+
+
+echo "Total number of arguements = " $#
+# $@ stores your arguments in an array
+echo "The argumements are " $@
+
+if [ $# -lt 2 ]; then
+	echo "Number of arguments < 2"
+	exit 1
+fi
+
+# Refering to arguments by order
+
+echo "First argument is: " $1
+echo "Second argment is: " $2
+
+# Arguments as an array
+#
+args=("$@")
+echo "First argument is:" ${args[0]}
+echo "Last argument is:" ${args[-1]}
+
+
